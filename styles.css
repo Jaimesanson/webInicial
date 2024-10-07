@@ -1,0 +1,32 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2c0e37; /* Fondo morado LED brillante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+}
+
+.centered-content {
+    text-align: center;
+}
+
+/* Estilos del texto con borde neón */
+.neon-text {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #a945c7, 0 0 20px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    padding: 20px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(169, 69, 199, 1), 0 0 30px rgba(169, 69, 199, 0.5);
+    border-radius: 8px;
+}
