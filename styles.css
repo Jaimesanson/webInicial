@@ -13,8 +13,10 @@ body {
     height: 100vh;
     font-family: Arial, sans-serif;
     color: #FFFFFF;
+    font-family: Consolas, monospace;
 }
 
+/* Centrar el contenido */
 .centered-content {
     text-align: center;
 }
@@ -29,4 +31,101 @@ body {
     border: 2px solid transparent;
     box-shadow: 0 0 10px rgba(169, 69, 199, 1), 0 0 30px rgba(169, 69, 199, 0.5);
     border-radius: 8px;
+}
+
+/* Estilo del botón con efecto neón y animación hover */
+.btn-neon {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-family: Consolas, monospace; /* Cambia la fuente del botón */
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.2s;
+    border: 2px solid #a945c7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}
+
+/* Animaciones del hover */
+.btn-neon:hover {
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
+}
+
+.btn-neon span {
+    position: absolute;
+    display: block;
+}
+
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #a945c7);
+}
+
+.btn-neon:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+
+#span2 {
+    right: 0;
+    top: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a945c7);
+}
+
+.btn-neon:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #a945c7);
+}
+
+.btn-neon:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#span4 {
+    left: 0;
+    bottom: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #a945c7);
+}
+
+.btn-neon:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 600px) {
+    .neon-text {
+        font-size: 24px;
+    }
+
+    .btn-neon {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
 }
